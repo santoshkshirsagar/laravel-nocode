@@ -1,0 +1,54 @@
+{
+    "name": "santoshkshirsagar/laravel-nocode",
+    "description": "Create Laravel Admin Application Without Coding",
+    "keywords": [
+        "santoshkshirsagar",
+        "laravel-nocode"
+    ],
+    "homepage": "https://github.com/santoshkshirsagar/laravel-nocode",
+    "license": "MIT",
+    "type": "library",
+    "authors": [
+        {
+            "name": "Santosh Kshirsagar",
+            "email": "santoshkshirsagar97@rediffmail.com",
+            "role": "Developer"
+        }
+    ],
+    "require": {
+        "php": "^7.4|^8.0",
+        "illuminate/support": "^8.0"
+    },
+    "require-dev": {
+        "orchestra/testbench": "^6.0",
+        "phpunit/phpunit": "^9.0"
+    },
+    "autoload": {
+        "psr-4": {
+            "Santoshkshirsagar\\LaravelNocode\\": "src"
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "Santoshkshirsagar\\LaravelNocode\\Tests\\": "tests"
+        }
+    },
+    "scripts": {
+        "test": "vendor/bin/phpunit",
+        "test-coverage": "vendor/bin/phpunit --coverage-html coverage"
+
+    },
+    "config": {
+        "sort-packages": true
+    },
+    "extra": {
+        "laravel": {
+            "providers": [
+                "Santoshkshirsagar\\LaravelNocode\\LaravelNocodeServiceProvider"
+            ],
+            "aliases": {
+                "LaravelNocode": "Santoshkshirsagar\\LaravelNocode\\LaravelNocodeFacade"
+            }
+        }
+    }
+}
